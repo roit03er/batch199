@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+           
+           <context:component-scan base-package="com.Spring"></context:component-scan>
+    <!-- Define a Student bean -->
+    
+   
+    <bean class="com.Spring.TurboJetEngine" id="tje">
+    	<property name="company" value="GE"></property>
+    </bean>
+    
+    <bean id="cargo" class="com.Spring.CargoPlane">
+    	<property name="model" value="C-130 Herculus"></property>
+    	 <property name="range" value="7000  "></property>
+    	 <property name="engine"  ref="tpe"></property>
+    </bean>
+   
+    
+     <bean id="fp" class="com.Spring.FighterPlane">
+	<constructor-arg name="model" value="F-16 Falcon"></constructor-arg> 
+	<constructor-arg name="range" value="10000"></constructor-arg> 	 
+	<constructor-arg name="engine" ref="tje"></constructor-arg>
+    </bean>
+    
+    
+    
+
+</beans>
