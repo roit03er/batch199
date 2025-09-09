@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 360px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .register-container label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .register-container input[type="text"],
+    .register-container input[type="password"],
+    .register-container input[type="email"],
+    .register-container input[type="tel"],
+    .register-container textarea,
+    .register-container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    .register-container textarea {
+      min-height: 60px;
+    }
+
+    .register-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #667eea;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .register-container input[type="submit"]:hover {
+      background-color: #5a67d8;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>User Registration</h2>
+    <form action="registerServlet" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="phonenumber">Phone Number</label>
+      <input type="tel" name="phonenumber" id="phonenumber" required pattern="[0-9]{10}" title="Enter 10 digit phone number" />
+
+      <label for="address">Address</label>
+      <textarea name="address" id="address" required></textarea>
+
+     <label for="role">Role</label>
+<select name="role" id="role" required>
+  <option value="Customer">Customer</option>
+  <option value="Restaurant_Admin">Restaurant Admin</option>
+  <option value="Delivery_Agent">Delivery Agent</option>
+  <option value="Super_Admin">Super Admin</option>
+</select>
+
+
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+</body>
+</html>
