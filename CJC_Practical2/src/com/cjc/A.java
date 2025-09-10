@@ -12,4 +12,7 @@ public class A {
 			System.out.println("Rohit patil");
 			
 		}
+		public void sub() {
+			System.out.println(20-10);
+		}
 }	

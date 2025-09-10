@@ -47,8 +47,8 @@ public class Student {
 //		
 //	}
 	
-	public String Calculator() {
-		
-	}
+//	public String Calculator() {
+//		
+//	}
 	
 }

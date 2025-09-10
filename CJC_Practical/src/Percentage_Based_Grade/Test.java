@@ -23,7 +23,7 @@ public class Test {
 			
 			String s=stu.calculator(per);
 			String p= stu.performance(s);
-			System.out.println(p);
+			System.out.println();
 		
 		}
 }
