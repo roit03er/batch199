@@ -22,6 +22,6 @@ public class Strong_Number {
 				}else {
 					System.out.println("Not Strong Number");
 				}
+				System.out.println("Code Executed");
 			}
-	System.out.println("Code Executed");
 }
